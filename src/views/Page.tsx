@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header } from './Header';
+import { Header } from '../components/_layout/header/Header';
 import './page.css';
 
 type User = {
@@ -36,7 +36,7 @@ export const Page: React.VFC = () => {
         <ul>
           <li>
             Use a higher-level connected component. Storybook helps you compose such data from the
-            "args" of child component stories
+            &quot;args&quot; of child component stories
           </li>
           <li>
             Assemble data in the page component from your services. You can mock these services out
@@ -45,7 +45,7 @@ export const Page: React.VFC = () => {
         </ul>
         <p>
           Get a guided tutorial on component-driven development at{' '}
-          <a href="https://storybook.js.org/tutorials/" target="_blank" rel="noopener noreferrer">
+          <a href="renderers/react/template/cli/ts/Page" target="_blank" rel="noopener noreferrer">
             Storybook tutorials
           </a>
           . Read more in the{' '}
