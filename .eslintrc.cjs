@@ -12,15 +12,13 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:jsx-a11y/recommended',
     'plugin:eslint-comments/recommended',
-    "plugin:tailwindcss/recommended",
+    'plugin:tailwindcss/recommended',
     'prettier',
     'plugin:storybook/recommended',
-    'plugin:mdx/recommended',
   ],
   env: {
     es6: true,
@@ -35,13 +33,22 @@ module.exports = {
       },
     ],
     'eslint-comments/require-description': ['error'],
+    'tailwindcss/no-custom-classname': 'off'
   },
   overrides: [
+    {
+      files: ['.tsx', '.ts'],
+      extends: 'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    },
     {
       files: ['**/*.stories.*'],
       rules: {
         'import/no-anonymous-default-export': 'off',
       },
+    },
+    {
+      files: ['*.mdx'],
+      extends: 'plugin:mdx/recommended',
     },
   ],
   settings: {

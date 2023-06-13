@@ -36,3 +36,5 @@ Unless you need to update configuration on the associated frameworks, everything
 - If anyone knows how, we should probably use SSR where we can...
 
 - Everything gets a test. This will include integration tests when we get that far (using Playwright), but for now it's [Storybook](https://storybook.js.org/) and [Jest](https://jestjs.io/) with [Testing Library](https://testing-library.com/docs/react-testing-library/intro/).
+
+- We're using conventional commit messages. If you use CLI Git rather than VSCode Git, the cli will walk you through this with zero effort.
