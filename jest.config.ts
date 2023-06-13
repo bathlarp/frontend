@@ -1,4 +1,4 @@
-import type { JestConfigWithTsJest } from 'ts-jest'
+import type { JestConfigWithTsJest } from 'ts-jest';
 
 const jestConfig: JestConfigWithTsJest = {
   testMatch: ['<rootDir>/**/*.spec.(ts|tsx)'],
@@ -9,10 +9,11 @@ const jestConfig: JestConfigWithTsJest = {
   },
   transform: {
     '^.+\\.tsx?$': [
-      'ts-jest',
+      'babel-jest',
       { tsconfig: '<rootDir>/tsconfig.eslint.json' },
     ],
-    '.+\\.(svg|style|png|jpg|ttf|woff|woff2)$': '<rootDir>/test/__mocks__/fileMock.js',
+    '.+\\.(svg|style|png|jpg|ttf|woff|woff2)$':
+      '<rootDir>/test/__mocks__/fileMock.cjs',
   },
 };
 export default jestConfig;

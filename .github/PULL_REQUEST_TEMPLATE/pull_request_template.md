@@ -3,7 +3,6 @@ name: Pull request
 labels: ''
 assignees: ''
 title: ''
-
 ---
 
 **Issues affected**
