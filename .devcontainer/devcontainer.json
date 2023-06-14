@@ -36,10 +36,18 @@
           "watch": false,
           "onSave": "test-src-file"
         },
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "stylelint.snippet": ["css", "less", "postcss", "scss"],
         "stylelint.validate": ["css", "less", "postcss", "scss"],
-        "prettier.prettierPath": "./node_modules/prettier"
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true,
+          "source.fixAll": true
+        },
+        "eslint.validate": ["javascript", "typescript"],
+        "prettier.prettierPath": "./node_modules/prettier",
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "scss.format.enable": false,
+        "css.format.enable": false
       }
     }
   },

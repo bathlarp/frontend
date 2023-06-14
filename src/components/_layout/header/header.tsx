@@ -1,4 +1,7 @@
+import { FunctionComponent } from 'react';
+
 import { Button } from '../../button/Button';
+
 import './header.css';
 
 type User = {
@@ -12,12 +15,12 @@ interface HeaderProps {
   onCreateAccount: () => void;
 }
 
-export const Header = ({
+export const Header: FunctionComponent<HeaderProps> = ({
   user,
   onLogin,
   onLogout,
   onCreateAccount,
-}: HeaderProps) => (
+}) => (
   <header>
     <div className="wrapper">
       <div>

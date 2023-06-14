@@ -1,16 +1,16 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    ".eslintrc.*",
+    ".eslintrc.cjs",
     "*.config.*",
-    "*.md",
-    "_docs/*.md",
     "src/**/*.ts",
     "src/**/*.tsx",
-    "src/**/*.mdx",
     "test/**/*.cjs",
     "test/**/*.ts",
     "test/**/*.tsx",
-    "typings/**/*.ts"
+    "typings/**/*.ts",
+    "*.md",
+    "_docs/*.md",
+    "src/**/*.mdx"
   ]
 }
