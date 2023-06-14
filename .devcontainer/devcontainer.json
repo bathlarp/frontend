@@ -1,0 +1,61 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.241.1/containers/typescript-node
+{
+  "name": "Node.js & TypeScript",
+  "build": {
+    "dockerfile": "Dockerfile",
+    // Update 'VARIANT' to pick a Node version: 18, 16, 14.
+    // Append -bullseye or -buster to pin to an OS version.
+    // Use -bullseye variants on local on arm64/Apple Silicon.
+    "args": {
+      "VARIANT": "18"
+    }
+  },
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "unifiedjs.vscode-mdx",
+        "ms-azuretools.vscode-docker",
+        "github.vscode-pull-request-github",
+        "eamodio.gitlens",
+        "davidanson.vscode-markdownlint",
+        "christian-kohler.npm-intellisense",
+        "orta.vscode-jest",
+        "firsttris.vscode-jest-runner",
+        "ms-playwright.playwright",
+        "riccardoforina.storybook-helper",
+        "esbenp.prettier-vscode",
+        "stylelint.vscode-stylelint"
+      ],
+      "settings": {
+        "jest.autoRun": {
+          "watch": false,
+          "onSave": "test-src-file"
+        },
+        "stylelint.snippet": ["css", "less", "postcss", "scss"],
+        "stylelint.validate": ["css", "less", "postcss", "scss"],
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true,
+          "source.fixAll": true
+        },
+        "eslint.validate": ["javascript", "typescript"],
+        "prettier.prettierPath": "./node_modules/prettier",
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "scss.format.enable": false,
+        "css.format.enable": false
+      }
+    }
+  },
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [3000, 6006],
+  "runArgs": ["--name", "bladesdb_devcontainer"],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "npm install",
+  // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "node"
+}
