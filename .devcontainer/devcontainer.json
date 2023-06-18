@@ -29,7 +29,8 @@
         "ms-playwright.playwright",
         "riccardoforina.storybook-helper",
         "esbenp.prettier-vscode",
-        "stylelint.vscode-stylelint"
+        "stylelint.vscode-stylelint",
+        "snyk-security.snyk-vulnerability-scanner"
       ],
       "settings": {
         "jest.autoRun": {
@@ -47,7 +48,11 @@
         "editor.formatOnSave": true,
         "editor.formatOnPaste": true,
         "scss.format.enable": false,
-        "css.format.enable": false
+        "css.format.enable": false,
+        "snyk.advanced.organization": "bathlarp",
+        "snyk.trustedFolders": [
+          "/workspaces/frontend"
+        ]
       }
     }
   },
