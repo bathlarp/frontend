@@ -7,6 +7,7 @@ on:
 permissions:
   contents: read
   security-events: write
+  statuses: write
 
 env:
   # This is where you will need to introduce the Snyk API token created with your Snyk account
