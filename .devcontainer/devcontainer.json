@@ -29,7 +29,8 @@
         "ms-playwright.playwright",
         "riccardoforina.storybook-helper",
         "esbenp.prettier-vscode",
-        "stylelint.vscode-stylelint"
+        "stylelint.vscode-stylelint",
+        "bradlc.vscode-tailwindcss"
       ],
       "settings": {
         "jest.autoRun": {

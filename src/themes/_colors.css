@@ -1,0 +1,41 @@
+@layer base {
+    :root {
+        --primary: 173 6 6;
+        --primary-dark: 104 4 4;
+        --background: 255 249 215;
+        --standout: 255 255 255;
+        --error: 217 4 41;
+        --warning: 255 189 56;
+        --success: 27 138 107;
+
+        &.dark {
+            --primary: 255 215 0;
+            --primary-dark: 235 229 195;
+            --background: 40 4 4;
+            --standout: 0 0 0;
+            --error: 217 4 41;
+            --warning: 255 189 56;
+            --success: 27 138 107;
+        }
+
+        &.contrast {
+            --primary: 158 43 43;
+            --primary-dark: 51 32 20;
+            --background: 255 224 181;
+            --standout: 255 255 255;
+            --error: 217 4 41;
+            --warning: 255 189 56;
+            --success: 27 138 107;
+        }
+    }
+}
+
+@layer base {
+    html, body {
+        @apply bg-background text-primary-dark;
+
+        .newtext {
+            color: #afa;
+        }
+    }
+}
