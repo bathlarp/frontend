@@ -8,13 +8,8 @@ const config: StorybookConfig = {
     '@storybook/addon-interactions',
     '@storybook/addon-a11y',
     '@storybook/test-runner',
-    {
-      name: '@storybook/addon-styling',
-      options: {
-        postCss: true,
-        cssModules: true,
-      },
-    },
+    '@storybook/addon-styling',
+    'storybook-addon-designs'
   ],
   framework: {
     name: '@storybook/react-vite',

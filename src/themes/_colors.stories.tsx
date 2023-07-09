@@ -12,7 +12,7 @@ const ColourBlocks: FunctionComponent = () => <div className='grid grid-cols-4 g
 </div>;
 
 const meta: Meta<typeof ColourBlocks> = {
-  title: 'Themes',
+  title: 'Library/Themes',
   parameters: {
     layout: 'fullscreen',
   },
