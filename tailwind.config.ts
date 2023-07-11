@@ -4,10 +4,7 @@ import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 export default {
-  content: [
-    './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
     extend: {
@@ -27,10 +24,10 @@ export default {
         serif: ['Amiri', ...defaultTheme.fontFamily.serif],
       },
     },
+    rotate: {
+      270: '270deg',
+    },
   },
-  plugins: [
-    forms,
-    typography,
-  ],
+  plugins: [forms, typography],
   safelist: ['dark', 'contrast'],
 } satisfies Config;
