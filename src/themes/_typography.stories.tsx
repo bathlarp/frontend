@@ -11,6 +11,7 @@ const TextBlocks: FunctionComponent = () => <div className='grid-rows-7 grid gri
   <p>Paragraph</p>
   <a href=''>Link</a>
   <label>Label</label>
+  <p className='text-sm font-bold text-error'>Error text</p>
 </div>;
 
 const meta: Meta<typeof TextBlocks> = {
