@@ -17,5 +17,12 @@ module.exports = {
         ignoreAtRules: ['tailwind'],
       },
     ],
+    "function-no-unknown": null,
+    "scss/function-no-unknown": [
+      true,
+      {
+        ignoreFunctions: ['theme']
+      }
+    ]
   },
 };

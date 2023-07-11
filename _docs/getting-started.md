@@ -22,10 +22,10 @@ Unless you need to update configuration on the associated frameworks, everything
 - `components`:
   - `components\x`: Any generic component - should include a .tsx file, a .module.scss file and a .stories.tsx file. Nest sub-components as needed.
   - `components\_layout\x`: Anything that is specifically page framing such as headers, footers etc.
+- `pages\x`: Pages and nested groups of pages.
 - `providers`: React contexts plus their bundled provider element.
 - `themes`: Any global scss or mixins etc to use later.
 - `utilities`: Reusable functions plus their tests.
-- `views\x`: Pages and nested groups of pages.
 
 ## Conventions
 

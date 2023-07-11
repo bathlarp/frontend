@@ -30,6 +30,7 @@
         "riccardoforina.storybook-helper",
         "esbenp.prettier-vscode",
         "stylelint.vscode-stylelint",
+        "bradlc.vscode-tailwindcss",
         "snyk-security.snyk-vulnerability-scanner"
       ],
       "settings": {
@@ -50,9 +51,7 @@
         "scss.format.enable": false,
         "css.format.enable": false,
         "snyk.advanced.organization": "bathlarp",
-        "snyk.trustedFolders": [
-          "/workspaces/frontend"
-        ]
+        "snyk.trustedFolders": ["/workspaces/frontend"]
       }
     }
   },
