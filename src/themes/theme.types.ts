@@ -5,4 +5,5 @@ export type ColorTypes =
   | 'standout'
   | 'error'
   | 'warning'
-  | 'notice';
+  | 'success'
+  | 'none';

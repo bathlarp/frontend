@@ -1,4 +1,7 @@
+import React from 'react';
+
 import { withThemeByClassName } from '@storybook/addon-styling';
+import { Title, Description, Stories, Controls} from '@storybook/blocks';
 
 import '../src/themes/root.css';
 
@@ -12,9 +15,19 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Themes', 'Display', 'Interactive', 'Layout']
-    }
-  }
+      order: ['Themes', 'Display', 'Interactive', 'Layout'],
+    },
+  },
+  docs: {
+    page: () => (
+      <>
+        <Title />
+        <Description />
+        <Controls />
+        <Stories />
+      </>
+    ),
+  },
 };
 
 export const decorators = [

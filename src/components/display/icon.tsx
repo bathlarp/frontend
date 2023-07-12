@@ -1,27 +1,29 @@
 import { FunctionComponent } from 'react';
 
-import { ColorTypes } from '../../themes/themeTypes';
+import { ColorTypes } from '../../themes/theme.types';
 
 import {
   iconFillMap, IconName, iconsMap, iconStrokeMap,
-} from './iconTypes';
+} from './icon.types';
 
 interface IconProps {
   iconName: IconName;
   strokeColour?: ColorTypes;
   fillColour?: ColorTypes;
-  classNames?: string;
+  incTitle?: boolean;
+  classes?: string;
+  title?: string;
 }
 
 export const Icon: FunctionComponent<IconProps> = ({
-  iconName, strokeColour, fillColour, classNames,
+  iconName, strokeColour, fillColour, incTitle, classes, title,
 }) => {
-  const icon = iconsMap[iconName];
+  const { component: IconComponent, defaultTitle, rotation } = iconsMap[iconName];
 
-  return <svg className={
-    `${iconFillMap[fillColour ?? 'standout']} 
-    ${strokeColour ? iconStrokeMap[strokeColour] ?? '' : ''} 
-    ${icon.rotation ?? ''} ${classNames ?? ''}`}>
-    <use href={icon.file} />
-  </svg>;
+  const stroke = iconStrokeMap[strokeColour ?? 'none'];
+  const fill = fillColour ? iconFillMap[fillColour] : '';
+
+  return <>
+    <IconComponent title={incTitle ? title ?? defaultTitle : undefined} className={`${stroke} ${fill} ${rotation ?? ''} ${classes ?? ''}`} />
+  </>;
 };

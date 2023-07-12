@@ -23,9 +23,9 @@ export default {
         sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
         serif: ['Amiri', ...defaultTheme.fontFamily.serif],
       },
-    },
-    rotate: {
-      270: '270deg',
+      rotate: {
+        270: '270deg',
+      },
     },
   },
   plugins: [forms, typography],
