@@ -71,6 +71,12 @@ export const AllIcons: Story = {
       },
     },
   },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/QcjBY56Dql5WNfVycHoWJL/BladesDB2?type=design&node-id=413-360&mode=design&t=wxGw4FaPTG5FPA40-4',
+    },
+  },
   render: (args) => {
     const { iconName, ...colourArgs } = args;
 

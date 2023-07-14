@@ -15,7 +15,7 @@ const TextBlocks: FunctionComponent = () => <div className='grid-rows-7 grid gri
 </div>;
 
 const meta: Meta<typeof TextBlocks> = {
-  title: 'Themes',
+  title: 'Library/Themes',
   parameters: {
     layout: 'fullscreen',
   },
