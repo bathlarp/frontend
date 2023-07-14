@@ -31,7 +31,8 @@
         "esbenp.prettier-vscode",
         "stylelint.vscode-stylelint",
         "bradlc.vscode-tailwindcss",
-        "snyk-security.snyk-vulnerability-scanner"
+        "snyk-security.snyk-vulnerability-scanner",
+        "github.vscode-github-actions"
       ],
       "settings": {
         "jest.autoRun": {
