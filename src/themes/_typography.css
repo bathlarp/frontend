@@ -34,7 +34,11 @@
     }
 
     a {
-        @apply text-primary underline;
+        @apply text-primary no-underline;
+
+        &:hover {
+            @apply underline;
+        }
     }
 
     label {
