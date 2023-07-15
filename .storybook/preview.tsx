@@ -1,4 +1,7 @@
+import React from 'react';
+
 import { withThemeByClassName } from '@storybook/addon-styling';
+import { Title, Description, Stories, Controls } from '@storybook/blocks';
 import { Preview } from '@storybook/react';
 
 import '../src/themes/root.css';
@@ -20,6 +23,16 @@ const preview: Preview = {
           ['Themes', 'Display', 'Interactive', 'Layout'],
         ],
       },
+    },
+    docs: {
+      page: () => (
+        <>
+          <Title />
+          <Description />
+          <Controls />
+          <Stories />
+        </>
+      ),
     },
   },
   decorators: [

@@ -9,7 +9,7 @@ const config: StorybookConfig = {
     '@storybook/addon-a11y',
     '@storybook/test-runner',
     '@storybook/addon-styling',
-    'storybook-addon-designs'
+    'storybook-addon-designs',
   ],
   framework: {
     name: '@storybook/react-vite',
