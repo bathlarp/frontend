@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { ColorTypes } from '../../themes/theme.types';
 
@@ -13,10 +13,11 @@ interface IconProps {
   incTitle?: boolean;
   classes?: string;
   title?: string;
+  role?: React.AriaRole;
 }
 
 export const Icon: FunctionComponent<IconProps> = ({
-  iconName, strokeColour, fillColour, incTitle, classes, title,
+  iconName, strokeColour, fillColour, incTitle, classes, title, role,
 }) => {
   const { component: IconComponent, defaultTitle, rotation } = iconsMap[iconName];
 
@@ -24,6 +25,6 @@ export const Icon: FunctionComponent<IconProps> = ({
   const fill = fillColour ? iconFillMap[fillColour] : '';
 
   return <>
-    <IconComponent title={incTitle ? title ?? defaultTitle : undefined} className={`${stroke} ${fill} ${rotation ?? ''} ${classes ?? ''}`} />
+    <IconComponent role={role ?? undefined} title={incTitle ? title ?? defaultTitle : undefined} className={`${stroke} ${fill} ${rotation ?? ''} ${classes ?? ''}`} />
   </>;
 };

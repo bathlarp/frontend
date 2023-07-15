@@ -35,6 +35,9 @@ const meta: Meta<typeof Icon> = {
     classes: {
       description: 'Any extra classes you might want to apply on top of the built-in ones, like sizing or drop-shadows.',
     },
+    role: {
+      description: 'An optional ARIA role in case the icon is being used for a specific purpose (like a menu). If not included, the default image role will be used.',
+    },
   },
 };
 
@@ -66,6 +69,11 @@ export const AllIcons: Story = {
       },
     },
     title: {
+      table: {
+        disable: true,
+      },
+    },
+    role: {
       table: {
         disable: true,
       },
