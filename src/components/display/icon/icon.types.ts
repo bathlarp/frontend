@@ -1,28 +1,27 @@
 import { FunctionComponent } from 'react';
 
-import { ReactComponent as Account } from '../../assets/icons/account-circle-line.svg';
-import { ReactComponent as Insurance } from '../../assets/icons/draft-line.svg';
-import { ReactComponent as Facebook } from '../../assets/icons/facebook-box-fill.svg';
-import { ReactComponent as Meeting } from '../../assets/icons/file-list-3-line.svg';
-import { ReactComponent as FirstAider } from '../../assets/icons/first-aid-kit-line.svg';
-import { ReactComponent as MultidayGame } from '../../assets/icons/hotel-bed-fill.svg';
-import { ReactComponent as SignIn } from '../../assets/icons/login-circle-fill.svg';
-import { ReactComponent as Location } from '../../assets/icons/map-pin-line.svg';
-import { ReactComponent as Edit } from '../../assets/icons/pencil-line.svg';
-import { ReactComponent as ICMeal } from '../../assets/icons/restaurant-fill.svg';
-import { ReactComponent as Search } from '../../assets/icons/search-line.svg';
-import { ReactComponent as CharacterRef } from '../../assets/icons/shield-user-line.svg';
-import { ReactComponent as Player } from '../../assets/icons/sip-line.svg';
-import { ReactComponent as Monster } from '../../assets/icons/skull-2-line.svg';
-import { ReactComponent as Rank } from '../../assets/icons/stock-line.svg';
-import { ReactComponent as Gm } from '../../assets/icons/survey-line.svg';
-import { ReactComponent as Game } from '../../assets/icons/sword-fill.svg';
-import { ReactComponent as Twitter } from '../../assets/icons/twitter-fill.svg';
-import { ReactComponent as AttendanceSignUp } from '../../assets/icons/user-follow-fill.svg';
-import { ReactComponent as Attending } from '../../assets/icons/user-line.svg';
-import { ReactComponent as NotAttending } from '../../assets/icons/user-unfollow-line.svg';
-import { ReactComponent as Committee } from '../../assets/icons/vip-crown-line.svg';
-import { ColorTypes } from '../../themes/theme.types';
+import { ReactComponent as Account } from '../../../assets/icons/account-circle-line.svg';
+import { ReactComponent as Insurance } from '../../../assets/icons/draft-line.svg';
+import { ReactComponent as Facebook } from '../../../assets/icons/facebook-box-fill.svg';
+import { ReactComponent as Meeting } from '../../../assets/icons/file-list-3-line.svg';
+import { ReactComponent as FirstAider } from '../../../assets/icons/first-aid-kit-line.svg';
+import { ReactComponent as MultidayGame } from '../../../assets/icons/hotel-bed-fill.svg';
+import { ReactComponent as SignIn } from '../../../assets/icons/login-circle-fill.svg';
+import { ReactComponent as Location } from '../../../assets/icons/map-pin-line.svg';
+import { ReactComponent as Edit } from '../../../assets/icons/pencil-line.svg';
+import { ReactComponent as ICMeal } from '../../../assets/icons/restaurant-fill.svg';
+import { ReactComponent as Search } from '../../../assets/icons/search-line.svg';
+import { ReactComponent as CharacterRef } from '../../../assets/icons/shield-user-line.svg';
+import { ReactComponent as Player } from '../../../assets/icons/sip-line.svg';
+import { ReactComponent as Monster } from '../../../assets/icons/skull-2-line.svg';
+import { ReactComponent as Rank } from '../../../assets/icons/stock-line.svg';
+import { ReactComponent as Gm } from '../../../assets/icons/survey-line.svg';
+import { ReactComponent as Game } from '../../../assets/icons/sword-fill.svg';
+import { ReactComponent as Twitter } from '../../../assets/icons/twitter-fill.svg';
+import { ReactComponent as AttendanceSignUp } from '../../../assets/icons/user-follow-fill.svg';
+import { ReactComponent as Attending } from '../../../assets/icons/user-line.svg';
+import { ReactComponent as NotAttending } from '../../../assets/icons/user-unfollow-line.svg';
+import { ReactComponent as Committee } from '../../../assets/icons/vip-crown-line.svg';
 
 export type IconName =
   | 'account'
@@ -58,28 +57,6 @@ interface IconDef {
   defaultTitle: string;
   rotation?: string;
 }
-
-export const iconFillMap: Record<ColorTypes, string> = {
-  primary: 'fill-primary',
-  'primary-dark': 'fill-primary-dark',
-  background: 'fill-background',
-  standout: 'fill-standout',
-  success: 'fill-success',
-  warning: 'fill-warning',
-  error: 'fill-error',
-  none: 'fill-none',
-};
-
-export const iconStrokeMap: Record<ColorTypes, string> = {
-  primary: 'stroke-primary',
-  'primary-dark': 'stroke-primary-dark',
-  background: 'stroke-background',
-  standout: 'stroke-standout',
-  success: 'stroke-success',
-  warning: 'stroke-warning',
-  error: 'stroke-error',
-  none: 'stroke-none',
-};
 
 export const iconsMap: Record<IconName, IconDef> = {
   account: {
