@@ -35,17 +35,14 @@
         "github.vscode-github-actions"
       ],
       "settings": {
-        "jest.autoRun": {
-          "watch": false,
-          "onSave": "test-src-file"
-        },
+        "jest.autoRun": "watch",
         "stylelint.snippet": ["css", "less", "postcss", "scss"],
         "stylelint.validate": ["css", "less", "postcss", "scss"],
         "editor.codeActionsOnSave": {
           "source.fixAll.eslint": true,
           "source.fixAll": true
         },
-        "eslint.validate": ["javascript", "typescript"],
+        "eslint.validate": ["javascript", "typescript", "typescriptreact"],
         "prettier.prettierPath": "./node_modules/prettier",
         "editor.formatOnSave": true,
         "editor.formatOnPaste": true,

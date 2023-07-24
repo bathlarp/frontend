@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from 'react';
 
-import { ColorTypes } from '../../themes/theme.types';
+import { ColorTypes, svgFillMap, svgStrokeMap } from '../../../themes/theme.types';
 
 import {
-  iconFillMap, IconName, iconsMap, iconStrokeMap,
+  IconName, iconsMap,
 } from './icon.types';
 
 interface IconProps {
@@ -21,8 +21,8 @@ export const Icon: FunctionComponent<IconProps> = ({
 }) => {
   const { component: IconComponent, defaultTitle, rotation } = iconsMap[iconName];
 
-  const stroke = iconStrokeMap[strokeColour ?? 'none'];
-  const fill = fillColour ? iconFillMap[fillColour] : '';
+  const stroke = svgStrokeMap[strokeColour ?? 'none'];
+  const fill = fillColour ? svgFillMap[fillColour] : '';
 
   return <>
     <IconComponent role={role ?? undefined} title={incTitle ? title ?? defaultTitle : undefined} className={`${stroke} ${fill} ${rotation ?? ''} ${classes ?? ''}`} />

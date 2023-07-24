@@ -26,6 +26,28 @@ export default {
       rotate: {
         270: '270deg',
       },
+      keyframes: {
+        'pulse-start': {
+          '0%': { opacity: '1' },
+          '25%': { opacity: '0.3' },
+          '75%': { opacity: '1' },
+        },
+        'pulse-middle': {
+          '0%': { opacity: '1' },
+          '50%': { opacity: '0.3' },
+          '100%': { opacity: '1' },
+        },
+        'pulse-end': {
+          '25%': { opacity: '1' },
+          '75%': { opacity: '0.3' },
+          '100%': { opacity: '1' },
+        },
+      },
+      animation: {
+        'loader-start': 'pulse-start 2s ease-in-out infinite',
+        'loader-middle': 'pulse-middle 2s ease-in-out infinite',
+        'loader-end': 'pulse-end 2s ease-in-out infinite',
+      },
     },
   },
   plugins: [forms, typography],
