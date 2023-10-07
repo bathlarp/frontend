@@ -52,4 +52,10 @@ export default {
   },
   plugins: [forms, typography],
   safelist: ['dark', 'contrast'],
+  extend: {
+    screens: {
+      print: { raw: 'print' },
+      screen: { raw: 'screen' },
+    },
+  },
 } satisfies Config;

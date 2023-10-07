@@ -1,7 +1,8 @@
 import { FunctionComponent } from 'react';
+import Link from 'next/link';
 
 export const Footer: FunctionComponent = () => (
-  <footer className="px-auto absolute bottom-0 flex min-w-full flex-col items-center justify-center bg-primary py-3 md:flex-row">
+  <footer className="px-auto absolute bottom-0 flex min-w-full flex-col items-center justify-center bg-primary py-3 print:hidden md:flex-row">
     <div className="mb-3 flex flex-col items-center justify-center text-xs font-bold text-standout md:mb-0 md:flex-row ">
       <span className="py-1 align-middle md:px-1">
         Copyright &copy; BathLARP 2009 - {new Date().getFullYear()}.
@@ -19,15 +20,13 @@ export const Footer: FunctionComponent = () => (
         key: 'bug',
       },
     ].map(({ text, href, key }) => (
-      <>
-        <a
-          href={href}
-          key={key}
-          className="border-standout py-1 text-xs font-bold text-standout last:border-r-0 md:border-r md:px-1"
-        >
-          {text}
-        </a>
-      </>
+      <Link
+        href={href}
+        key={key}
+        className="border-standout py-1 text-xs font-bold text-standout last:border-r-0 md:border-r md:px-1"
+      >
+        {text}
+      </Link>
     ))}
   </footer>
 );
