@@ -16,7 +16,8 @@ const meta: Meta<typeof Loader> = {
   tags: ['autodocs'],
   argTypes: {
     fillColour: {
-      description: 'The main colour of the loader from the standard colours list.',
+      description:
+        'The main colour of the loader from the standard colours list.',
     },
     overlay: {
       description: 'Does the loader include a full-page blocking overlay?',

@@ -1,47 +1,48 @@
 @import 'https://fonts.googleapis.com/css2?family=Amiri:ital@1&family=Montserrat&display=swap';
 
 @layer base {
-    html, body {
-        @apply leading-relaxed;
-    }
+  html,
+  body {
+    @apply leading-relaxed;
+  }
 
-    h1 {
-        @apply text-6xl font-serif;
-    }
+  h1 {
+    @apply text-6xl font-serif;
+  }
 
-    h2 {
-        @apply text-5xl font-serif;
-    }
+  h2 {
+    @apply text-5xl font-serif;
+  }
 
-    h3 {
-        @apply text-4xl font-serif;
-    }
+  h3 {
+    @apply text-4xl font-serif;
+  }
 
-    h4 {
-        @apply text-3xl font-serif;
-    }
+  h4 {
+    @apply text-3xl font-serif;
+  }
 
-    h5 {
-        @apply text-2xl font-serif;
-    }
+  h5 {
+    @apply text-2xl font-serif;
+  }
 
-    h6 {
-        @apply text-lg font-serif;
-    }
+  h6 {
+    @apply text-lg font-serif;
+  }
 
-    p {
-        @apply text-base text-justify;
-    }
+  p {
+    @apply text-base text-justify;
+  }
 
-    a {
-        @apply text-primary no-underline;
+  a {
+    @apply text-primary no-underline;
 
-        &:hover {
-            @apply underline;
-        }
+    &:hover {
+      @apply underline;
     }
+  }
 
-    label {
-        @apply text-base font-bold;
-    }
+  label {
+    @apply text-base font-bold;
+  }
 }

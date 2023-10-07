@@ -1,6 +1,6 @@
 import { FunctionComponent, useEffect, useState } from 'react';
 
-import { backgroundColorMap, ColorTypes } from '../../../themes/theme.types';
+import { backgroundColorMap, ColorTypes } from '@/_themes/theme.types';
 
 interface LoaderProps {
   fillColour?: ColorTypes;
@@ -23,7 +23,7 @@ export const Loader: FunctionComponent<LoaderProps> = ({
         setTimeout(() => setShow(false), 300);
       }
     };
-  }, []);
+  }, [show]);
 
   return (
     <div role={'status'} aria-live={'assertive'}>

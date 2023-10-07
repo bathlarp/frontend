@@ -1,6 +1,4 @@
-import {
-  Description, Primary, Title,
-} from '@storybook/blocks';
+import { Description, Primary, Title } from '@storybook/blocks';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Footer as FooterComp } from './footer';

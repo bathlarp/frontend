@@ -6,7 +6,7 @@
 
   &::after,
   &::before {
-    content: '';  
+    content: '';
     box-sizing: border-box;
     width: 5rem;
     height: 5rem;
@@ -24,7 +24,6 @@
     animation-delay: 1s;
   }
 }
-
 
 @keyframes animloader {
   0% {
