@@ -21,22 +21,23 @@ const meta: Meta<typeof Icon> = {
       description: 'The icon you want to display from the standard list.',
     },
     strokeColour: {
-      description: 'The colour of the SVG outlines from the standard colour list - unless you want an outlines-only icon, leave this to default to `none`.',
+      description:
+        'The colour of the SVG outlines from the standard colour list - unless you want an outlines-only icon, leave this to default to `none`.',
     },
     fillColour: {
-      description: 'The main colour of the SVG icon from the standard colours list.',
+      description:
+        'The main colour of the SVG icon from the standard colours list.',
     },
     title: {
       description: 'An optional alternative title to the default.',
     },
     incTitle: {
-      description: 'A switch to optionally include a title. For accessibility, you should do this whenever an icon isn\'t part of a button etc.',
+      description:
+        "A switch to optionally include a title. For accessibility, you should do this whenever an icon isn't part of a button etc.",
     },
     classes: {
-      description: 'Any extra classes you might want to apply on top of the built-in ones, like sizing or drop-shadows.',
-    },
-    role: {
-      description: 'An optional ARIA role in case the icon is being used for a specific purpose (like a menu). If not included, the default image role will be used.',
+      description:
+        'Any extra classes you might want to apply on top of the built-in ones, like sizing or drop-shadows.',
     },
   },
 };
@@ -73,11 +74,6 @@ export const AllIcons: Story = {
         disable: true,
       },
     },
-    role: {
-      table: {
-        disable: true,
-      },
-    },
   },
   parameters: {
     design: {
@@ -86,15 +82,20 @@ export const AllIcons: Story = {
     },
   },
   render: (args) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars -- purely for extracting arg
     const { iconName, ...colourArgs } = args;
 
     const iconNames = Object.keys(iconsMap);
 
-    return <div className='grid grid-flow-row grid-cols-3 gap-2 p-2 md:w-1/2'>
-      {iconNames.map((icon) => <div className='flex items-center' key={icon}>
-        <Icon iconName={icon as IconName} {...colourArgs} classes='h-5' />
-        <span className='pl-2'>{icon}</span>
-      </div>)}
-    </div>;
+    return (
+      <div className="grid grid-flow-row grid-cols-3 gap-2 p-2 md:w-1/2">
+        {iconNames.map((icon) => (
+          <div className="flex items-center" key={icon}>
+            <Icon iconName={icon as IconName} {...colourArgs} classes="h-5" />
+            <span className="pl-2">{icon}</span>
+          </div>
+        ))}
+      </div>
+    );
   },
 };

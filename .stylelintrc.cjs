@@ -1,9 +1,5 @@
 module.exports = {
-  extends: [
-    'stylelint-config-standard-scss',
-    'stylelint-config-css-modules',
-    'stylelint-config-prettier-scss',
-  ],
+  extends: ['stylelint-config-css-modules', 'stylelint-prettier/recommended'],
   rules: {
     'at-rule-no-unknown': [
       true,
@@ -11,18 +7,11 @@ module.exports = {
         ignoreAtRules: ['tailwind'],
       },
     ],
-    'scss/at-rule-no-unknown': [
+    'function-no-unknown': [
       true,
       {
-        ignoreAtRules: ['tailwind'],
+        ignoreFunctions: ['theme'],
       },
     ],
-    "function-no-unknown": null,
-    "scss/function-no-unknown": [
-      true,
-      {
-        ignoreFunctions: ['theme']
-      }
-    ]
   },
 };
