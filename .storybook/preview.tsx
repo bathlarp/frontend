@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { withThemeByClassName } from '@storybook/addon-styling';
+import { withThemeByClassName } from '@storybook/addon-themes';
 import { Title, Description, Stories, Controls } from '@storybook/blocks';
-import { Preview } from '@storybook/react';
+import { Preview, ReactRenderer } from '@storybook/react';
 
-import '../src/themes/root.css';
+import '../src/_themes/root.css';
 
 const preview: Preview = {
   parameters: {
@@ -36,7 +36,7 @@ const preview: Preview = {
     },
   },
   decorators: [
-    withThemeByClassName({
+    withThemeByClassName<ReactRenderer>({
       themes: {
         light: 'light',
         dark: 'dark',

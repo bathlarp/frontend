@@ -43,7 +43,6 @@
           "source.fixAll": true
         },
         "eslint.validate": ["javascript", "typescript", "typescriptreact"],
-        "prettier.prettierPath": "./node_modules/prettier",
         "editor.formatOnSave": true,
         "editor.formatOnPaste": true,
         "scss.format.enable": false,
