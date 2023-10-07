@@ -66,6 +66,9 @@ module.exports = {
       parserOptions: {
         project: ['./tsconfig.eslint.json'], // Specify it only for TypeScript files
       },
+      rules: {
+        '@typescript-eslint/no-unsafe-assignment': 'warn',
+      },
     },
     {
       files: ['**/*.stories.*'],

@@ -21,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
+        <Header
+          navElements={['Events', 'Club', 'System', 'World', 'Resources']}
+        />
         <main>{children}</main>
         <Footer />
       </body>

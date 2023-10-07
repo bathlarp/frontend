@@ -1,6 +1,6 @@
 import { FunctionComponent, useEffect, useState } from 'react';
 
-import { backgroundColorMap, ColorTypes } from '@/_themes/theme.types';
+import { backgroundColorMap, ColorTypes } from '../../_themes/theme.types';
 
 interface LoaderProps {
   fillColour?: ColorTypes;

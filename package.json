@@ -16,6 +16,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@material-tailwind/react": "^2.1.2",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
@@ -44,6 +45,7 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "^6.7.4",
     "autoprefixer": "latest",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "latest",
