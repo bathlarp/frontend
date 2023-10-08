@@ -48,6 +48,14 @@ export default {
         'loader-middle': 'pulse-middle 2s ease-in-out infinite',
         'loader-end': 'pulse-end 2s ease-in-out infinite',
       },
+      screens: {
+        print: { raw: 'print' },
+        screen: { raw: 'screen' },
+      },
+      gridTemplateColumns: {
+        header: '12% auto 30%',
+        'header-small': '75px 1fr 20px',
+      },
     },
   },
   plugins: [forms, typography],

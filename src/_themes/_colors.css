@@ -39,4 +39,10 @@
       color: #afa;
     }
   }
+
+  .dark {
+    .invert-colours {
+      filter: invert(1) hue-rotate(235deg);
+    }
+  }
 }
