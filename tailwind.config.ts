@@ -53,7 +53,8 @@ export default {
         screen: { raw: 'screen' },
       },
       gridTemplateColumns: {
-        header: '15% auto 30%',
+        header: '12% auto 30%',
+        'header-small': '75px 1fr 20px',
       },
     },
   },
