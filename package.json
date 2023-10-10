@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@material-tailwind/react": "^2.1.2",
+    "@storybook/jest": "^0.2.3",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
