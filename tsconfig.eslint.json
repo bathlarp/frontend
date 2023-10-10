@@ -3,6 +3,7 @@
   "include": [
     ".eslintrc.cjs",
     "*.config.*",
+    "middleware.ts",
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.types.ts",

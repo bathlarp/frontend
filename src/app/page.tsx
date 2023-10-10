@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en-GB',
   },
+  metadataBase: new URL(process.env.METADATA_BASE ?? ''),
 };
 
 export default function Home() {

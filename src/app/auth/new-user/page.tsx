@@ -1,0 +1,31 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Welcome! - BathLARP',
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
+export default function NewUser() {
+  return (
+    <>
+      <h1>Welcome!</h1>
+      <p>
+        Congratulations on joining BathLARP. Now you have an account set up,
+        here are some things you want to do to get started:
+      </p>
+      <ol>
+        <li>
+          If you haven&apos;t already, email the Committee on{' '}
+          <Link href="mailto:committee@bathlarp.co.uk">
+            committee@bathlarp.co.uk
+          </Link>
+          and let them know you exist as a real person.
+        </li>
+      </ol>
+    </>
+  );
+}

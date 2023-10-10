@@ -1,7 +1,9 @@
+'use client';
+
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
 
-import { Icon } from '../../../_components/display/icon/icon';
+import { Icon } from '../../_display/icon/icon';
 
 import BathLarpLogo from './BathLarpLogo';
 import BathLarpSwordLogo from './BathLarpSword';
@@ -15,7 +17,9 @@ export const Header: FunctionComponent<HeaderProps> = ({ navElements }) => (
     <BathLarpSwordLogo />
     <div className="grid grid-cols-header-small py-4 md:grid-cols-header">
       <div></div>
-      <BathLarpLogo />
+      <Link href={'/'}>
+        <BathLarpLogo />
+      </Link>
       <div></div>
     </div>
     <nav
