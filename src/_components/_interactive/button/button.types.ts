@@ -9,6 +9,8 @@ export type ButtonType = React.ButtonHTMLAttributes<HTMLButtonElement>['type'];
 
 export type ButtonTheme = 'primary' | 'secondary';
 
+export type IconPosition = 'left' | 'right';
+
 interface ButtonDef {
   border: string;
   background: string;

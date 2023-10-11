@@ -26,6 +26,12 @@ const meta: Meta<typeof Button> = {
       action: 'clicked',
     },
   },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/QcjBY56Dql5WNfVycHoWJL/BladesDB2?type=design&node-id=221-97',
+    },
+  },
 };
 
 export default meta;
@@ -43,6 +49,15 @@ export const PrimaryIconButton: Story = {
     label: 'Primary',
     theme: 'primary',
     iconName: 'gm',
+  },
+};
+
+export const PrimaryIconRightButton: Story = {
+  args: {
+    label: 'Primary',
+    theme: 'primary',
+    iconName: 'gm',
+    iconPosition: 'right',
   },
 };
 
