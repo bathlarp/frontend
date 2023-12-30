@@ -1,56 +1,68 @@
-import {
-  FieldError,
-  FieldValues,
-  Path,
-  UseFormRegister,
-} from 'react-hook-form';
+import React, {
+  DetailedHTMLProps,
+  FC,
+  forwardRef,
+  InputHTMLAttributes,
+} from 'react';
+import classNames from 'classnames';
 
-type InputProps<T extends FieldValues> = {
-  field: Path<T>;
-  register: UseFormRegister<T>;
-  required: boolean;
+import { defaultStyles, InputSize, sizeMap } from '../formConsts';
+
+export type InputType =
+  | 'color'
+  | 'date'
+  | 'datetime-local'
+  | 'email'
+  | 'month'
+  | 'number'
+  | 'password'
+  | 'search'
+  | 'tel'
+  | 'text'
+  | 'time'
+  | 'url'
+  | 'week'
+  | 'hidden';
+
+export type InputProps = {
+  id: string;
+  name: string;
   label: string;
-  helpText?: string;
-  errors?: FieldError;
-  type:
-    | 'color'
-    | 'date'
-    | 'datetime-local'
-    | 'email'
-    | 'month'
-    | 'number'
-    | 'password'
-    | 'search'
-    | 'tel'
-    | 'text'
-    | 'time'
-    | 'url'
-    | 'week'
-    | 'hidden';
-};
+  type?: InputType;
+  size?: InputSize;
+  className?: string;
+} & Omit<
+  DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>,
+  'size'
+>;
 
-export const Input = <T extends FieldValues>({
-  field,
-  label,
-  helpText,
-  register,
-  required,
-  type,
-  errors,
-}: InputProps<T>) => (
-  <>
-    <label aria-label={field}>
-      {label}
-      {helpText && <span>{helpText}</span>}
+export const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
+  (
+    {
+      id,
+      name,
+      label,
+      type = 'text',
+      size = 'medium',
+      className = '',
+      placeholder,
+      ...props
+    },
+    ref,
+  ) => {
+    return (
       <input
-        aria-labelledby={field}
+        id={id}
+        ref={ref}
+        name={name}
         type={type}
-        {...register(field, { required })}
+        aria-label={label}
+        placeholder={placeholder}
+        className={classNames([defaultStyles, sizeMap[size], className])}
+        {...props}
       />
-    </label>
-    {errors?.type === 'required' && <p role="alert">{label} is required</p>}
-    {errors && errors.type !== 'required' && (
-      <p role="alert">{errors.message}</p>
-    )}
-  </>
+    );
+  },
 );
+
+Input.displayName = 'Input';
