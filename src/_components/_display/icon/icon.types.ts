@@ -6,6 +6,7 @@ import Account from './icons/Account';
 import Attendance from './icons/Attendance';
 import Attending from './icons/Attending';
 import CharacterRef from './icons/CharacterRef';
+import Close from './icons/Close';
 import Committee from './icons/Committee';
 import Edit from './icons/Edit';
 import Facebook from './icons/Facebook';
@@ -29,6 +30,7 @@ export type IconName =
   | 'attendance'
   | 'attending'
   | 'characterref'
+  | 'close'
   | 'committee'
   | 'edit'
   | 'facebook'
@@ -96,6 +98,10 @@ export const iconsMap: Record<IconName, IconDef> = {
   characterref: {
     file: CharacterRef,
     defaultTitle: 'Character Ref icon',
+  },
+  close: {
+    file: Close,
+    defaultTitle: 'Close icon',
   },
   committee: {
     file: Committee,

@@ -1,7 +1,7 @@
 import React, { FunctionComponent, MouseEventHandler } from 'react';
 
-import { Icon } from '../../display/icon/icon';
-import { IconName } from '../../display/icon/icon.types';
+import { Icon } from '../../_display/icon/icon';
+import { IconName } from '../../_display/icon/icon.types';
 
 import {
   buttonMap,

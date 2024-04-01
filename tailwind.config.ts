@@ -18,6 +18,7 @@ export default {
         error: 'rgb(var(--error) / <alpha-value>)',
         warning: 'rgb(var(--warning) / <alpha-value>)',
         success: 'rgb(var(--success) / <alpha-value>)',
+        tableRow: 'rgb(var(--table-row) / <alpha-value>)',
       },
       fontFamily: {
         sans: ['Montserrat', ...defaultTheme.fontFamily.sans],

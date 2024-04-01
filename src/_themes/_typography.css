@@ -7,31 +7,31 @@
   }
 
   h1 {
-    @apply text-6xl font-serif;
+    @apply text-6xl font-serif leading-normal;
   }
 
   h2 {
-    @apply text-5xl font-serif;
+    @apply text-5xl font-serif leading-relaxed;
   }
 
   h3 {
-    @apply text-4xl font-serif;
+    @apply text-4xl font-serif leading-relaxed;
   }
 
   h4 {
-    @apply text-3xl font-serif;
+    @apply text-3xl font-serif leading-relaxed;
   }
 
   h5 {
-    @apply text-2xl font-serif;
+    @apply text-2xl font-serif leading-relaxed;
   }
 
   h6 {
-    @apply text-lg font-serif;
+    @apply text-lg font-serif leading-relaxed;
   }
 
   p {
-    @apply text-base text-justify;
+    @apply text-base mb-2;
   }
 
   a {
@@ -43,6 +43,14 @@
   }
 
   label {
-    @apply text-base font-bold;
+    @apply text-base font-bold leading-relaxed;
+  }
+
+  ul {
+    @apply mb-2 list-disc list-inside
+  }
+
+  ol {
+    @apply mb-2 list-decimal list-inside
   }
 }

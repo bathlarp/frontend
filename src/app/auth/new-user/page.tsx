@@ -22,8 +22,16 @@ export default function NewUser() {
           If you haven&apos;t already, email the Committee on{' '}
           <Link href="mailto:committee@bathlarp.co.uk">
             committee@bathlarp.co.uk
-          </Link>
+          </Link>{' '}
           and let them know you exist as a real person.
+        </li>
+        <li>
+          Fill out your profile - we will need some basic medical and contact
+          details before your first game.
+        </li>
+        <li>
+          Read through the Getting Started guides and start thinking about a
+          character.
         </li>
       </ol>
     </>

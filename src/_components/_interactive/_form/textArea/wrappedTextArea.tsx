@@ -5,11 +5,13 @@ import {
   FieldValues,
   Path,
   RegisterOptions,
+  useFormContext,
   UseFormRegister,
 } from 'react-hook-form';
 import classNames from 'classnames';
 import { get } from 'lodash';
 
+import { defaultErrorStyles } from '../formConsts';
 import { InputWrapper } from '../inputWrapper';
 
 import { TextArea, TextAreaProps } from './textArea';
@@ -24,38 +26,38 @@ export type WrappedTextAreaProps<TFormValues extends FieldValues> = {
 
 export const WrappedTextArea = <TFormValues extends FieldValues>({
   name,
-  id,
-  register,
   rules,
-  errors,
   label,
   helpText,
   className,
   ...props
 }: WrappedTextAreaProps<TFormValues>): JSX.Element => {
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext<TFormValues>();
+
   const errorMessages = get(errors, name);
   const hasError = !!(errors && errorMessages);
 
   return (
     <div className={className} aria-live="polite">
-      <InputWrapper
+      <InputWrapper<TFormValues>
         name={name}
-        id={id}
         label={label}
-        errorMessages={errorMessages}
+        errors={errors}
         helpText={helpText}
       >
         <TextArea
-          name={name}
-          id={id}
           aria-invalid={hasError}
           className={classNames({
-            'transition-colors focus:outline-none focus:ring-2 focus:ring-opacity-50 border-red-600 hover:border-red-600 focus:border-red-600 focus:ring-red-600':
-              hasError,
+            [defaultErrorStyles]: hasError,
           })}
           label={label}
           {...props}
           {...(register && register(name, rules))}
+          name={name}
+          id={name}
         />
       </InputWrapper>
     </div>

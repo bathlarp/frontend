@@ -21,7 +21,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "strict": false
   },
   "include": [
     "src/**/*.ts",
@@ -30,7 +31,8 @@
     "src/**/*.tsx",
     "src/assets",
     "next-env.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/_components/_interactive/_form/form.mdx"
   ],
   "exclude": ["node_modules"]
 }
