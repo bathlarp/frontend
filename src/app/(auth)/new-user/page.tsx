@@ -15,7 +15,7 @@ export default function NewUser() {
       <h1>Welcome!</h1>
       <p>
         Congratulations on joining BathLARP. Now you have an account set up,
-        here are some things you want to do to get started:
+        here are some things you want to do:
       </p>
       <ol>
         <li>
@@ -23,7 +23,8 @@ export default function NewUser() {
           <Link href="mailto:committee@bathlarp.co.uk">
             committee@bathlarp.co.uk
           </Link>{' '}
-          and let them know you exist as a real person.
+          and let them know you exist as a real person. This will get you added
+          as a full member with access to all website functionality.
         </li>
         <li>
           Fill out your profile - we will need some basic medical and contact
@@ -34,6 +35,9 @@ export default function NewUser() {
           character.
         </li>
       </ol>
+      <p>
+        <Link href={'/sign-in'}>Sign in to get started!</Link>
+      </p>
     </>
   );
 }

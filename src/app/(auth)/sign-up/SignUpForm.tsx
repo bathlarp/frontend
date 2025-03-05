@@ -1,31 +1,46 @@
 'use client';
 
-import { array, InferType, object, string } from 'yup';
+import { useRouter } from 'next/navigation';
+import { InferType, object, string } from 'yup';
 
 import { WrappedCheckbox } from '@/_components/_interactive/_form/checkbox/wrappedCheckbox';
 import { Form } from '@/_components/_interactive/_form/form';
 import { WrappedInput } from '@/_components/_interactive/_form/input/wrappedInput';
+import { setToast } from '@/_components/_layout/toast/toastProvider';
+import { signUpRequest } from '@/_data/account';
 
 export const SignUpForm = () => {
+  const router = useRouter();
+
   const schema = object({
-    username: string().required().max(25),
-    displayName: string().required().max(25),
-    password: string().required().max(40),
-    isOverEighteen: array().required(),
-    isCodeOfConduct: array().required(),
+    email: string().required().email(),
+    password: string().required().min(8).max(40),
+    isOverEighteen: string().required(),
+    isCodeOfConduct: string().required(),
   });
 
   interface Register extends InferType<typeof schema> {}
 
-  const onSubmit = (data: Register) => console.log(data);
+  const onSubmit = async (data: Register) => {
+    if (data.isCodeOfConduct === 'yes' && data.isOverEighteen === 'yes') {
+      const signUp = await signUpRequest(data);
+      if (!!signUp.data) {
+        setToast('success', signUp.data);
+        router.push('/');
+      }
+      if (!!signUp.error) {
+        setToast('error', signUp.error);
+      }
+    }
+  };
 
   return (
     <Form<Register> onSubmit={onSubmit} schema={schema}>
-      <WrappedInput name={'username'} label={'Username'} id={'username'} />
       <WrappedInput
-        name={'displayName'}
-        label={'Display name'}
-        id={'displayName'}
+        name={'email'}
+        label={'Email'}
+        id={'email'}
+        type={'email'}
       />
       <WrappedInput
         name={'password'}

@@ -31,8 +31,7 @@
     "src/**/*.tsx",
     "src/assets",
     "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "src/_components/_interactive/_form/form.mdx"
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

@@ -1,3 +1,5 @@
+'use client';
+
 import { FunctionComponent, useEffect, useState } from 'react';
 
 import { backgroundColorMap, ColorTypes } from '../../../_themes/theme.types';
@@ -34,7 +36,7 @@ export const Loader: FunctionComponent<LoaderProps> = ({
           }`}
         >
           <div
-            className={`grid h-20 w-20 grid-cols-3 grid-rows-1 gap-3 ${
+            className={`grid size-20 grid-cols-3 grid-rows-1 gap-3 ${
               overlay ? 'z-50' : ''
             }`}
           >

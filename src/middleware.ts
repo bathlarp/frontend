@@ -2,9 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export function middleware(request: NextRequest) {
   console.log(`Request: ${request.nextUrl.pathname}`);
-  if (request.nextUrl.pathname.startsWith('/confirm')) {
-    return NextResponse.redirect(new URL('/auth/new-user', request.url));
-  }
+
+  return NextResponse.next();
 }
 
 export const config = {

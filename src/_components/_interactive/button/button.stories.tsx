@@ -1,6 +1,6 @@
-import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
-import { userEvent, waitFor, within } from '@storybook/testing-library';
+import { expect, fn } from '@storybook/test';
+import { userEvent, waitFor, within } from '@storybook/test';
 
 import { Button } from './button';
 
@@ -32,6 +32,7 @@ const meta: Meta<typeof Button> = {
       url: 'https://www.figma.com/file/QcjBY56Dql5WNfVycHoWJL/BladesDB2?type=design&node-id=221-97',
     },
   },
+  args: { onClick: fn() },
 };
 
 export default meta;

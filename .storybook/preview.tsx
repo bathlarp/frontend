@@ -8,7 +8,6 @@ import '../src/_themes/root.css';
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -35,6 +34,7 @@ const preview: Preview = {
       ),
     },
   },
+
   decorators: [
     withThemeByClassName<ReactRenderer>({
       themes: {
@@ -45,6 +45,8 @@ const preview: Preview = {
       defaultTheme: 'light',
     }),
   ],
+
+  tags: ['autodocs', 'autodocs']
 };
 
 export default preview;

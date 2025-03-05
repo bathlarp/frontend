@@ -53,10 +53,6 @@ export default {
         print: { raw: 'print' },
         screen: { raw: 'screen' },
       },
-      gridTemplateColumns: {
-        header: '12% auto 30%',
-        'header-small': '75px 1fr 20px',
-      },
     },
   },
   plugins: [forms, typography],
