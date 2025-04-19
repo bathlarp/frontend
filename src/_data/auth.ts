@@ -13,12 +13,17 @@ import { cookies } from 'next/headers';
 import {
   buildAuthHeader,
   configuration,
+  Data,
+  DataError,
   sessionOptions,
 } from './clientConfiguration';
 
 const sessionApi = new SessionsApi(configuration);
 
-export const loginRequest = async (email: string, password: string) => {
+export const loginRequest = async (
+  email: string,
+  password: string,
+): Promise<Data<string> | DataError> => {
   const request: CreateSessionRequest = {
     data: {
       attributes: { email, password },
@@ -39,15 +44,19 @@ export const loginRequest = async (email: string, password: string) => {
     }
     session.access_token = data.access_token;
     session.renewal_token = data.renewal_token;
+    session.access_expiry = data.access_expiry;
+
     await session.save();
-    return;
+    return { data: 'OK' };
   } catch (err) {
     const error = err as AxiosError;
     return { error: error.message };
   }
 };
 
-export const updateSessionRequest = async () => {
+export const updateSessionRequest = async (): Promise<
+  Data<SessionAttributes> | DataError
+> => {
   const request: UpdateSessionRequest = {
     data: {
       id: '543d23f5-a711-4ae1-928d-277ca36177be',
@@ -60,6 +69,9 @@ export const updateSessionRequest = async () => {
     sessionOptions,
   );
 
+  if (!session?.renewal_token) {
+    return { error: 'SessionError' };
+  }
   const headers = buildAuthHeader(session.renewal_token);
 
   try {
@@ -68,17 +80,14 @@ export const updateSessionRequest = async () => {
     if (!data) {
       return { error: 'Missing data' };
     }
-    session.access_token = data.access_token;
-    session.renewal_token = data.renewal_token;
-    await session.save();
-    return { data: 'OK' };
+    return { data };
   } catch (err) {
     const error = err as AxiosError;
     return { error: error.message };
   }
 };
 
-export const logoutRequest = async () => {
+export const logoutRequest = async (): Promise<Data<string> | DataError> => {
   const session = await getIronSession<SessionAttributes>(
     cookies(),
     sessionOptions,
@@ -89,7 +98,7 @@ export const logoutRequest = async () => {
   try {
     await sessionApi.deleteSession({ headers });
     session.destroy();
-    return;
+    return { data: 'OK' };
   } catch (err) {
     const error = err as AxiosError;
     return { error: error.message };

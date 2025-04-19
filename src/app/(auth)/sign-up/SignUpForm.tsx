@@ -8,6 +8,7 @@ import { Form } from '@/_components/_interactive/_form/form';
 import { WrappedInput } from '@/_components/_interactive/_form/input/wrappedInput';
 import { setToast } from '@/_components/_layout/toast/toastProvider';
 import { signUpRequest } from '@/_data/account';
+import { isError } from '@/_data/clientConfiguration';
 
 export const SignUpForm = () => {
   const router = useRouter();
@@ -24,13 +25,12 @@ export const SignUpForm = () => {
   const onSubmit = async (data: Register) => {
     if (data.isCodeOfConduct === 'yes' && data.isOverEighteen === 'yes') {
       const signUp = await signUpRequest(data);
-      if (!!signUp.data) {
-        setToast('success', signUp.data);
-        router.push('/');
-      }
-      if (!!signUp.error) {
+      if (isError(signUp)) {
         setToast('error', signUp.error);
+        return;
       }
+      setToast('success', signUp.data);
+      router.push('/');
     }
   };
 

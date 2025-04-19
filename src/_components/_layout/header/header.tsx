@@ -3,6 +3,7 @@
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
 
+import { isError } from '@/_data/clientConfiguration';
 import { getPronouns } from '@/_data/pronouns';
 
 import { Icon } from '../../_display/icon/icon';
@@ -15,6 +16,7 @@ export const Header: FunctionComponent = async () => {
   const navElements = ['Events', 'Club', 'System', 'World', 'Resources'];
 
   const pronouns = await getPronouns();
+  const isLoggedIn = !isError(pronouns);
 
   return (
     <header id="banner" className="w-full print:hidden">
@@ -25,7 +27,7 @@ export const Header: FunctionComponent = async () => {
           <BathLarpLogo />
         </Link>
         <div className="hidden md:ml-auto md:mr-4 md:flex md:flex-row md:gap-2">
-          <Auth isLoggedIn={!!pronouns} />
+          <Auth isLoggedIn={isLoggedIn} />
         </div>
       </div>
       <nav

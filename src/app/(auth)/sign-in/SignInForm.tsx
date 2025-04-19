@@ -7,6 +7,7 @@ import { Form } from '@/_components/_interactive/_form/form';
 import { WrappedInput } from '@/_components/_interactive/_form/input/wrappedInput';
 import { setToast } from '@/_components/_layout/toast/toastProvider';
 import { loginRequest } from '@/_data/auth';
+import { isError } from '@/_data/clientConfiguration';
 
 export const SignInForm = () => {
   const router = useRouter();
@@ -19,7 +20,7 @@ export const SignInForm = () => {
 
   const onSubmit = async (data: Login) => {
     const error = await loginRequest(data.username, data.password);
-    if (error) {
+    if (isError(error)) {
       setToast(
         'error',
         'Something went wrong - check your details and try again.',
