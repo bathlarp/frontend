@@ -55,5 +55,6 @@ export const verifySession = cache(async () => {
     redirect('/sign-in');
   }
 
+  // ToDo: Replace with actual auth verification.
   return { isAuth: true, userId: 'Judith' };
 });
