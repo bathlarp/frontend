@@ -83,7 +83,7 @@ export const updateSessionRequest = async (): Promise<
     return { data };
   } catch (err) {
     const error = err as AxiosError;
-    return { error: error.message };
+    return { error: error.status ?? error.message };
   }
 };
 
