@@ -1,3 +1,16 @@
 @import './_tailwind.css';
 @import './_colors.css';
 @import './_typography.css';
+@import './_tables.css';
+
+/* MDX editor: classes that cannot be renamed and thus cannot go in the module*/
+.mdxeditor-toolbar {
+    border: 1px solid rgb(var(--primary-dark));
+    border-radius: var(--radius-medium) var(--radius-medium) 0 0 !important;
+}
+
+.mdxeditor-root-contenteditable {
+    border: 1px solid rgb(var(--primary-dark));
+    border-radius: 0 0 var(--radius-medium) var(--radius-medium) !important;
+    overflow: hidden;
+}

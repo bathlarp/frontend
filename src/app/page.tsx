@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'BathLARP',
   description: 'Fantasy Live Action roleplay in Bath, UK',
   keywords: ['larp', 'live action roleplay', 'Bath'],
   robots: {
@@ -11,6 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en-GB',
   },
+  metadataBase: new URL(process.env.DOMAIN ?? ''),
 };
 
 export default function Home() {

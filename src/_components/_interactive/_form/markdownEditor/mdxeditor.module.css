@@ -1,0 +1,97 @@
+.mdxeditorColors {
+  --accentBase: var(--blue-1);
+  --accentBgSubtle: var(--blue-2);
+  --accentBg: var(--blue-3);
+  --accentBgHover: var(--blue-4);
+  --accentBgActive: var(--blue-5);
+  --accentLine: var(--blue-6);
+  --accentBorder: rgb(var(--standout));
+  --accentBorderHover: var(--blue-8);
+  --accentSolid: var(--blue-9);
+  --accentSolidHover: rgb(var(--primary));
+  --accentText: rgb(var(--primary-dark));
+  --accentTextContrast: rgb(var(--primary-dark));
+
+  --basePageBg: rgb(var(--primary-dark));
+  --baseBase: rgb(var(--primary));
+  --baseBgSubtle: rgb(var(--standout));
+  --baseBg: rgb(var(--primary));
+  --baseBgHover: rgb(var(--background));
+  --baseBgActive: rgb(var(--primary-dark));
+  --baseLine: rgb(var(--background));
+  --baseBorder: rgb(var(--primary-dark));
+  --baseBorderHover: rgb(var(--primary-dark));
+  --baseSolid: rgb(var(--background));
+  --baseSolidHover: rgb(var(--primary));
+  --baseText: rgb(var(--standout));
+  --baseTextContrast: rgb(var(--background));
+
+  --error-color: var(--error);
+
+  font-family: var(--font-body);
+  color: var(--baseText);
+  background: var(--background);
+}
+
+.contentEditable {
+  @apply text-primary-dark;
+  @apply leading-relaxed;
+
+  composes: p from global;
+
+  composes: h1 from global;
+
+  composes: h2 from global;
+
+  composes: h3 from global;
+
+  composes: h4 from global;
+
+  composes: h5 from global;
+
+  composes: h6 from global;
+
+  composes: a from global;
+
+  composes: label from global;
+}
+
+.contentEditable table {
+  @apply my-2 rounded-md overflow-hidden border-none;
+}
+
+.contentEditable th {
+  @apply bg-background text-primary-dark;
+}
+
+.contentEditable tbody tr:nth-child(even) {
+    @apply bg-tableRow;
+}
+
+.contentEditable tbody tr:nth-child(odd) {
+    @apply bg-tableRow/60;
+}
+
+.contentEditable tbody tr:nth-child(1) {
+    @apply bg-primary text-standout font-bold p-2;
+}
+
+.contentEditable tr:nth-child(1) td button:hover {
+    @apply bg-primary;
+}
+
+.contentEditable th[data-tool-cell="true"] button {
+  @apply bg-background;
+}
+
+.contentEditable tfoot th button {
+  @apply bg-background;
+}
+
+.contentEditable tbody tr td {
+  border: none !important;
+}
+
+.contentEditable [data-lexical-editor="true"] {
+  @apply bg-background border-standout border-y-2;
+}

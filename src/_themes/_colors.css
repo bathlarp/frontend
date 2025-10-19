@@ -8,6 +8,8 @@
     --warning: 92 61 0;
     --success: 39 93 19;
 
+    --table-row: 255 252 239;
+
     &.dark {
       --primary: 255 215 0;
       --primary-dark: 235 229 195;
@@ -16,6 +18,8 @@
       --error: 252 124 69;
       --warning: 255 189 56;
       --success: 37 177 65;
+
+      --table-row: 24 2 2;
     }
 
     &.contrast {
@@ -26,6 +30,8 @@
       --error: 140 3 26;
       --warning: 92 61 0;
       --success: 39 93 19;
+
+      --table-row: 255 252 239;
     }
   }
 }

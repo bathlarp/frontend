@@ -7,11 +7,11 @@ const BathLarpSwordLogo = () => {
       className="absolute mx-2 mt-2 h-20 md:mx-6 md:mt-4 md:h-40"
     >
       <title>BathLARP sword logo.</title>
-      <g clip-path="url(#clip0_6_39)" filter="url(#filter0_d_6_39)">
+      <g clipPath="url(#clip0_6_39)" filter="url(#filter0_d_6_39)">
         <g filter="url(#filter1_f_6_39)">
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M60.9725 101.776C60.9725 88.8046 60.9725 55.1563 66.9445 34.5435H78.8885C84.8606 55.1563 84.8606 88.8046 84.8606 101.776H60.9725Z"
             fill="url(#paint0_radial_6_39)"
           />
@@ -79,9 +79,9 @@ const BathLarpSwordLogo = () => {
           width="154"
           height="216"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -113,9 +113,9 @@ const BathLarpSwordLogo = () => {
           width="25.4233"
           height="68.7676"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -134,9 +134,9 @@ const BathLarpSwordLogo = () => {
           width="41.3168"
           height="41.7274"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -155,9 +155,9 @@ const BathLarpSwordLogo = () => {
           width="32.6441"
           height="32.9726"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -176,9 +176,9 @@ const BathLarpSwordLogo = () => {
           width="15.3162"
           height="15.7035"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -198,8 +198,8 @@ const BathLarpSwordLogo = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(64.1114 75.0615) rotate(166.169) scale(22.6846 50.7464)"
         >
-          <stop stop-color="#AA0000" />
-          <stop offset="1" stop-color="#720000" />
+          <stop stopColor="#AA0000" />
+          <stop offset="1" stopColor="#720000" />
         </radialGradient>
         <radialGradient
           id="paint1_radial_6_39"
@@ -209,8 +209,8 @@ const BathLarpSwordLogo = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(61.0566 106.045) rotate(-0.170073) scale(66.5182 61.845)"
         >
-          <stop stop-color="#E9DDAF" />
-          <stop offset="1" stop-color="#D5BD2D" />
+          <stop stopColor="#E9DDAF" />
+          <stop offset="1" stopColor="#D5BD2D" />
         </radialGradient>
         <linearGradient
           id="paint2_linear_6_39"
@@ -220,8 +220,8 @@ const BathLarpSwordLogo = () => {
           y2="115.289"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCCCCC" />
-          <stop offset="1" stop-color="#F2F2F2" />
+          <stop stopColor="#CCCCCC" />
+          <stop offset="1" stopColor="#F2F2F2" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_6_39"
@@ -231,8 +231,8 @@ const BathLarpSwordLogo = () => {
           y2="99.5926"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E9DDAF" />
-          <stop offset="1" stop-color="#D5BD2D" />
+          <stop stopColor="#E9DDAF" />
+          <stop offset="1" stopColor="#D5BD2D" />
         </linearGradient>
         <clipPath id="clip0_6_39">
           <rect width="146" height="208" fill="white" />

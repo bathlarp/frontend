@@ -1,0 +1,19 @@
+table {
+    @apply my-2 rounded-md overflow-hidden;
+}
+
+th {
+    @apply bg-primary text-standout font-bold p-2;
+}
+
+td {
+    @apply p-2
+}
+
+tr:nth-child(odd) {
+    @apply bg-tableRow;
+}
+
+tr:nth-child(even) {
+    @apply bg-tableRow/60;
+}
